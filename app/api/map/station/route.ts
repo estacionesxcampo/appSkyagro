@@ -9,7 +9,7 @@ export async function GET(request: Request) {
   }
 
   try {
-    const externalUrl = `http://3.209.148.75/skyagro/procesos_appsmith/api_datos_estacion_seleccionada.php?nombre=${encodeURIComponent(nombre)}`;
+    const externalUrl = `https://d14y888g0kj9pj.cloudfront.net/skyagro/procesos_appsmith/api_datos_estacion_seleccionada.php?nombre=${encodeURIComponent(nombre)}`;
     
     const response = await fetch(externalUrl);
     if (!response.ok) {

@@ -63,7 +63,7 @@ export default function Informes() {
     
     try {
       const condicion = reportType === 'resumen' ? 'daily' : 'hourly';
-      const url = `http://3.209.148.75/skyagro/procesos_appsmith/generador_reportes_json_condiciones.php?estacion=${pointData.codigo}&fecha_desde=${fechaDesde}&fecha_hasta=${fechaHasta}&condicion=${condicion}`;
+      const url = `https://d14y888g0kj9pj.cloudfront.net/skyagro/procesos_appsmith/generador_reportes_json_condiciones.php?estacion=${pointData.codigo}&fecha_desde=${fechaDesde}&fecha_hasta=${fechaHasta}&condicion=${condicion}`;
       
       const res = await fetch(url);
       if (res.ok) {

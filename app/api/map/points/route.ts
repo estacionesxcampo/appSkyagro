@@ -31,7 +31,7 @@ export async function GET() {
     const login = users[0].login;
 
     // 2. Consultar el servicio externo
-    const externalUrl = `http://3.209.148.75/skyagro/procesos_appsmith/generador_json_condiciones_por_usuario.php?usuario=${login}`;
+    const externalUrl = `https://d14y888g0kj9pj.cloudfront.net/skyagro/procesos_appsmith/generador_json_condiciones_por_usuario.php?usuario=${login}`;
     
     const response = await fetch(externalUrl);
     if (!response.ok) {

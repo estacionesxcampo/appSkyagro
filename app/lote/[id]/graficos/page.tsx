@@ -655,7 +655,7 @@ export default function Graficos() {
       const fetch24hData = async () => {
         setLoading24h(true);
         try {
-          const res = await fetch(`http://3.209.148.75/skyagro/procesos_appsmith/generador_json_condiciones_24_estacion.php?estacion=${pointData.codigo}`);
+          const res = await fetch(`https://d14y888g0kj9pj.cloudfront.net/skyagro/procesos_appsmith/generador_json_condiciones_24_estacion.php?estacion=${pointData.codigo}`);
           if (res.ok) {
             const data = await res.json();
             if (Array.isArray(data)) {
@@ -739,7 +739,7 @@ export default function Graficos() {
           const startDate = formatDate(sevenDaysAgo);
           const endDate = formatDate(today);
 
-          const url = `http://3.209.148.75/skyagro/procesos_appsmith/generador_reportes_json_condiciones_dia_desde_hasta_7_dias.php?estacion=${pointData.codigo}&fecha_desde=${startDate}&fecha_hasta=${endDate}`;
+          const url = `https://d14y888g0kj9pj.cloudfront.net/skyagro/procesos_appsmith/generador_reportes_json_condiciones_dia_desde_hasta_7_dias.php?estacion=${pointData.codigo}&fecha_desde=${startDate}&fecha_hasta=${endDate}`;
           
           const res = await fetch(url);
           if (res.ok) {
@@ -825,7 +825,7 @@ export default function Graficos() {
           const fechaDesde = formatDate(firstDayOfYear);
           const fechaHasta = formatDate(today);
 
-          const res = await fetch(`http://3.209.148.75/skyagro/procesos_appsmith/generador_reportes_json_condiciones_dia_desde_hasta_ano_mes.php?estacion=${pointData.codigo}&fecha_desde=${fechaDesde}&fecha_hasta=${fechaHasta}`);
+          const res = await fetch(`https://d14y888g0kj9pj.cloudfront.net/skyagro/procesos_appsmith/generador_reportes_json_condiciones_dia_desde_hasta_ano_mes.php?estacion=${pointData.codigo}&fecha_desde=${fechaDesde}&fecha_hasta=${fechaHasta}`);
           if (res.ok) {
             const data = await res.json();
             if (Array.isArray(data)) {
