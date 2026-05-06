@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { Leaf, Mail, Lock, AlertCircle, Loader2 } from 'lucide-react';
+import InstallButton from '@/components/InstallButton';
 
 export default function LoginPage() {
   const router = useRouter();
@@ -166,6 +167,7 @@ export default function LoginPage() {
               <Link href="/registro" className="font-medium text-green-600 hover:text-green-500">
                 Regístrate ahora
               </Link>
+              <InstallButton />
             </div>
           </div>
         </div>
